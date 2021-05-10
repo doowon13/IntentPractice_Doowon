@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 
             myIntent.putExtra("message", inputMessage)
 
+            startActivity(myIntent)
+
         }
 
         moveToOtherBtn.setOnClickListener {
