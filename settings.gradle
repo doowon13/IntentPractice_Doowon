@@ -1,0 +1,2 @@
+rootProject.name = "IntentPractice_Doowon"
+include ':app'
