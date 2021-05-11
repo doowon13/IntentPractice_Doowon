@@ -41,4 +41,19 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_FOR_NICKNAME) {
+
+            if (resultCode == RESULT_OK) {
+
+                val newNickname = data?.getStringExtra("nickname")
+                nicknameTxt.text = newNickname
+            }
+        }
+
+    }
+
 }
