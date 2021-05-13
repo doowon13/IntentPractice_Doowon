@@ -14,6 +14,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        callBtn.setOnClickListener {
+
+            val inputPhoneNumber = phoneNumberEdt.text.toString()
+
+            val myUri = Uri.parse("tel:${inputPhoneNumber}")
+
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+
+            startActivity(myIntent)
+        }
+
         dialBtn.setOnClickListener {
 
             val inputPhoneNumber = phoneNumberEdt.text.toString()
